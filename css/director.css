@@ -1,0 +1,49 @@
+.director .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2rem;
+}
+
+.director .box-container .box{
+    text-align: center;
+    background:#fff;
+    border-radius: .5rem;
+    border:var(rgb(44, 4, 94));
+    box-shadow: var(--box-shadow);
+    padding:2rem;
+}
+
+.director .box-container .box img{
+    height: 20rem;
+    border:var(black);
+    border-radius: .5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.director .box-container .box h3{
+    color:var(--black);
+    font-size: 2rem;
+}
+
+
+.director .box-container .box .share{
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    text-align: justify;
+    
+}
+
+
+
+
+.director .box-container .box .share a:hover{
+    background:var(--green);
+    color:#fff;
+    box-shadow: var(--box-shadow);
+}
+
+    
+
+
+

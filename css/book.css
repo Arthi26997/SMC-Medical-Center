@@ -1,0 +1,122 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f2f6fc;
+    --text-color: #333;
+    --accent-color: #0cb1c7;
+    --border-color: rgb(107, 195, 145); /* updated */
+    --radius: 8px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    background: var(--secondary-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.book .row {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background-color: var(--secondary-color); /* updated: row box color */
+    border-radius: var(--radius);
+    box-shadow: var(--box-shadow);
+}
+
+.book .row form {
+    background: #fff;
+    padding: 3rem;
+    border-radius: var(--radius);
+    box-shadow: var(--box-shadow);
+    max-width: 600px;
+    width: 100%;
+    animation: fadeIn 0.5s ease-in-out;
+    border: 1px solid lightcoral; /* added border to form */
+}
+
+.book .row form h3 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.book .row form h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-align: left;
+    margin: 1.2rem 0 0.5rem 0;
+}
+
+.book .row form .box {
+    width: 100%;
+    padding: 1rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color); /* updated border color */
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    color: #000;
+}
+
+.book .row form .box:focus {
+    border-color: var(--border-color);
+    box-shadow: 0 0 0 2px rgba(46, 139, 87, 0.3); /* seagreen shadow */
+    outline: none;
+}
+
+.book .row form label.box {
+    display: inline-block;
+    margin-right: 20px; /* Add space between radio buttons */
+    font-size: 1rem;
+    color: #444;
+    cursor: pointer;
+}
+
+.book .row form label.box input[type="radio"] {
+    vertical-align: middle;
+    margin-right: 6px; /* space between radio button and label text */
+}
+
+.book .row form .btn {
+    margin-top: 2rem;
+    background-color: var(--border-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.book .row form .btn:hover {
+    background-color: #2e8b57; /* seagreen darkened */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .book .row form {
+        padding: 2rem;
+    }
+
+    .book .row form h3 {
+        font-size: 2rem;
+    }
+
+    .book .row form h2 {
+        font-size: 1.2rem;
+    }
+
+    .book .row form .btn {
+        width: 100%;
+    }
+}
